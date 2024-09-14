@@ -1,0 +1,195 @@
+:root {
+  --bg-light: #f0f4f8;
+  --bg-dark: #1a202c;
+  --text-light: #2d3748;
+  --text-dark: #e2e8f0;
+  --primary-light: #4299e1;
+  --primary-dark: #63b3ed;
+  --card-light: #ffffff;
+  --card-dark: #2d3748;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.App.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  background-color: var(--card-light);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark .user-profile {
+  background-color: var(--card-dark);
+}
+
+.initials-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.dark .initials-circle {
+  background-color: var(--primary-dark);
+}
+
+.user-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.user-info h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .user-info p {
+  color: #a0aec0;
+}
+
+.user-activities h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-card {
+  background-color: var(--card-light);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .activity-card {
+  background-color: var(--card-dark);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-light);
+}
+
+.dark .activity-card h3 {
+  color: var(--primary-dark);
+}
+
+.activity-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.theme-switcher {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-light);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .theme-switcher {
+  background-color: var(--primary-dark);
+}
+
+.theme-switcher:hover {
+  background-color: #3182ce;
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .initials-circle {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
