@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Koach-user-dashboard/static/css/main.b990c863.css",
+    "main.js": "/Koach-user-dashboard/static/js/main.86469ec3.js",
+    "static/js/453.7e27d493.chunk.js": "/Koach-user-dashboard/static/js/453.7e27d493.chunk.js",
+    "index.html": "/Koach-user-dashboard/index.html",
+    "main.b990c863.css.map": "/Koach-user-dashboard/static/css/main.b990c863.css.map",
+    "main.86469ec3.js.map": "/Koach-user-dashboard/static/js/main.86469ec3.js.map",
+    "453.7e27d493.chunk.js.map": "/Koach-user-dashboard/static/js/453.7e27d493.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b990c863.css",
+    "static/js/main.86469ec3.js"
+  ]
+}
